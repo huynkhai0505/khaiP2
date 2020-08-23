@@ -17,12 +17,12 @@ router.post('/', (req, res, next) => {
         name: req.body.name,
         price: req.body.price
     };
-    const product = new Product({
+    const products = new Product({
         _id: new mongoose.Types.ObjectId(),
-        namee: req.body.name,
+        name: req.body.name,
         price: req.body.price
     });
-    product.save().then(result => {
+    products.save().then(result => {
         console.log(result);
     })
     .catch (err => console.log(err));

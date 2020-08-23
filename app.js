@@ -9,9 +9,10 @@ const mongoose = require('mongoose');
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
-mongoose.connect('mongodb+srv://huynhkhai:' + process.env.MONGO_ATLAS_PW + '@cluster0.umytc.mongodb.net/<dbname>?retryWrites=true&w=majority', 
+mongoose.connect('mongodb+srv://huynhkhai:quynhanh@cluster0.umytc.mongodb.net/<dbname>?retryWrites=true&w=majority',
 {
-    useMongoClient: true
+useNewUrlParser: true, 
+useUnifiedTopology: true 
 });
 
 app.use(morgan('dev'));
